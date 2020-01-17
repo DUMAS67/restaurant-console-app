@@ -2,14 +2,25 @@ package dev.entite;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Entity
+@Table(name = "PLAT")
+
 public class Plat {
 
+	@Id
 	private int id;
-    private String nom;
-    private int prixEnCentimesEuros;
+	@Column(name="NOM")
+	private String nom;
+	@Column(name="PRIXENCENTIMESEUROS")
+	private int prixEnCentimesEuros;
 
     public Plat() {
     }
