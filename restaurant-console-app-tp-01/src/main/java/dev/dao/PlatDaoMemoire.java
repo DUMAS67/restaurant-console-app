@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
 
-@Repository
+//@Repository
 public class PlatDaoMemoire implements IPlatDao {
 
     private List<Plat> listePlats = new ArrayList<>();

@@ -7,13 +7,15 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Plat {
 
+	private int id;
     private String nom;
-    private Integer prixEnCentimesEuros;
+    private int prixEnCentimesEuros;
 
     public Plat() {
     }
 
-    public Plat(String nom, Integer prixEnCentimesEuros) {
+    public Plat(String nom, int prixEnCentimesEuros) {
+    	
         this.nom = nom;
         this.prixEnCentimesEuros = prixEnCentimesEuros;
     }
@@ -26,15 +28,29 @@ public class Plat {
         this.nom = nom;
     }
 
-    public Integer getPrixEnCentimesEuros() {
+    public int getPrixEnCentimesEuros() {
         return prixEnCentimesEuros;
     }
 
-    public void setPrixEnCentimesEuros(Integer prixEnCentimesEuros) {
-        this.prixEnCentimesEuros = prixEnCentimesEuros;
+    public void setPrixEnCentimesEuros(int i) {
+        this.prixEnCentimesEuros = i;
     }
 
-    @Override
+    /**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
